@@ -48,6 +48,8 @@ public class MainActivity extends ListActivity {
         {
             case R.id.anyadir:
                 longitud++;
+                if(longitud >items.length)
+                    longitud = items.length;
                 arrayAdapter = new ArrayAdapter<String>(this,
                         android.R.layout.simple_list_item_1,
                         Arrays.copyOf(items,longitud));
